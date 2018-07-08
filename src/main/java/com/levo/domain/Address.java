@@ -17,7 +17,7 @@ public class Address {
     private String street;
     private Integer number;
     private String zipCode;
-
+    private String reference;
 
     public Address() {
     }
@@ -60,5 +60,13 @@ public class Address {
 
     public void setZipCode(String zipCode) {
         this.zipCode = zipCode;
+    }
+
+    public String getReference() {
+        return reference;
+    }
+
+    public void setReference(String reference) {
+        this.reference = reference;
     }
 }

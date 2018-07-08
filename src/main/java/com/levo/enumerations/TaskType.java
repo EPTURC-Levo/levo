@@ -1,4 +1,4 @@
-package com.levo.domain;
+package com.levo.enumerations;
 
 
 

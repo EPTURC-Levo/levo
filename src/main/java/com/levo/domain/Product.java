@@ -12,7 +12,27 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String receiverName;
+    private String responsableName;
+
+    private String productName;
+
+    public Product() {
+    }
 
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getResponsableName() {
+        return responsableName;
+    }
+
+    public void setResponsableName(String responsableName) {
+        this.responsableName = responsableName;
+    }
 }

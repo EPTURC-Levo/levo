@@ -1,9 +1,11 @@
 package com.levo.domain;
 
+import com.levo.enumerations.OcurrenceType;
+
 import javax.persistence.*;
 
 @Entity
-public class Occurrences {
+public class Occurrence {
 
 
     @Id
