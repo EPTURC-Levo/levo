@@ -1,0 +1,12 @@
+package com.levo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class LevoApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(LevoApplication.class, args);
+    }
+}
