@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -62,7 +62,7 @@
                             <span class="icon-thumbnail"><i class="pg-form"></i></span>
                         </li>
                         <li class="">
-                            <a href="rota.html">Rota de Entregas</a>
+                            <a th:href="@{~/rota}">Rota de Entregas</a>
                             <span class="icon-thumbnail"><i class="pg-note"></i></span>
                         </li>
                     </ul>
@@ -120,7 +120,7 @@
                 </div>
 
                 <!-- END User Info-->
-                <a href="#" class="header-icon pg pg-power btn-link m-l-10 sm-no-margin d-inline-block" data-toggle="tooltip" data-placement="left" title="Encerrar sessão" id="logout"></a>
+                <a th:href="@{~/logout}" class="header-icon pg pg-power btn-link m-l-10 sm-no-margin d-inline-block" data-toggle="tooltip" data-placement="left" title="Encerrar sessão" id="logout"></a>
             </div>
         </div>
         <!-- END HEADER -->

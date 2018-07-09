@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
    <head>
       <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
       <meta charset="utf-8" />
@@ -115,7 +115,7 @@
                   <span class="text-master">Olá,</span> <span class="semi-bold" id="username">Eiji</span>!
                </div>
                <!-- END User Info-->
-               <a href="#" class="header-icon pg pg-power btn-link m-l-10 sm-no-margin d-inline-block" data-toggle="tooltip" data-placement="left" title="Encerrar sessão" id="logout"></a>
+               <a th:href="@{~/logout}" class="header-icon pg pg-power btn-link m-l-10 sm-no-margin d-inline-block" data-toggle="tooltip" data-placement="left" title="Encerrar sessão" id="logout"></a>
             </div>
          </div>
          <!-- END HEADER -->
@@ -268,6 +268,29 @@
                         </tbody>
                      </table>
                   </div>
+                  <!-- DRIVER COM SPRING
+                  <div class="card-block">
+                     <table class="table table-hover demo-table-dynamic table-responsive-block" id="tableDriveWithDynamicRows">
+                        <thead>
+                        <tr>
+                           <th style="display: none">id</th>
+                           <th>Nome</th>
+                           <th>CPF</th>
+                           <th>Email</th>
+                        </tr>
+                        </thead>
+                        <tbody id="dataDrivers"  style="cursor: pointer">
+                        <tr th:if="${driver != null}" th:each="driver,iter: ${driverList}">
+                           <th style="display: none" th:text="${driver.id}"></th>
+                           <th th:text="${driver.name}"></th>
+                           <th th:text="${driver.socialId}"></th>
+                           <th th:text="${driver.email}"></th>
+                        </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  -->
+
                   <!-- END TABLE OF DRIVERS -->
                   <div class="card-header ">
                      <div class="pull-right">

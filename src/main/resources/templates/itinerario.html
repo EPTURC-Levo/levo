@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
    <head>
       <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
       <meta charset="utf-8" />
@@ -167,7 +167,7 @@
                   <span class="text-master">Olá,</span> <span class="semi-bold" id="username">Eiji</span>!
                </div>
                <!-- END User Info-->
-               <a href="#" class="header-icon pg pg-power btn-link m-l-10 sm-no-margin d-inline-block" data-toggle="tooltip" data-placement="left" title="Encerrar sessão" id="logout"></a>
+               <a th:href="@{~/logout}" class="header-icon pg pg-power btn-link m-l-10 sm-no-margin d-inline-block" data-toggle="tooltip" data-placement="left" title="Encerrar sessão" id="logout"></a>
             </div>
          </div>
          <!-- END HEADER -->
