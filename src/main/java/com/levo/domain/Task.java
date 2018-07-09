@@ -20,6 +20,7 @@ public class Task {
     private Boolean isDone;
     private Boolean success;
 
+
     @Column(length = 512)
     private String note;
 
@@ -100,4 +101,11 @@ public class Task {
         this.taskType = taskType;
     }
 
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
+    }
 }

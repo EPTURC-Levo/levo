@@ -16,7 +16,7 @@ public class Driver extends Staff{
     @JoinColumn(name = "vehicle_id")
     private Vehicle vehicle;
 
-    private Float phoneBattery;
+    private float phoneBattery;
 
     public Driver() {
     }
@@ -37,11 +37,11 @@ public class Driver extends Staff{
         this.vehicle = vehicle;
     }
 
-    public Float getPhoneBattery() {
+    public float getPhoneBattery() {
         return phoneBattery;
     }
 
-    public void setPhoneBattery(Float phoneBattery) {
+    public void setPhoneBattery(float phoneBattery) {
         this.phoneBattery = phoneBattery;
     }
 }

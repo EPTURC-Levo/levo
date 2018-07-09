@@ -35,4 +35,12 @@ public class Product {
     public void setResponsableName(String responsableName) {
         this.responsableName = responsableName;
     }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
 }

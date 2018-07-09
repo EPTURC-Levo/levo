@@ -10,6 +10,8 @@ public class Staff {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String socialId;
+    private String email;
     private String name;
 
     @OneToOne(cascade = CascadeType.ALL)
@@ -53,5 +55,21 @@ public class Staff {
 
     public void setAddress(Address address) {
         this.address = address;
+    }
+
+    public String getSocialId() {
+        return socialId;
+    }
+
+    public void setSocialId(String socialId) {
+        this.socialId = socialId;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

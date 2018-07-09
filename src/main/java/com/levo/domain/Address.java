@@ -16,7 +16,7 @@ public class Address {
     private String neighborhood;
     private String street;
     private Integer number;
-    private String zipCode;
+    private Integer zipCode;
     private String reference;
 
     public Address() {
@@ -54,11 +54,11 @@ public class Address {
         this.number = number;
     }
 
-    public String getZipCode() {
+    public Integer getZipCode() {
         return zipCode;
     }
 
-    public void setZipCode(String zipCode) {
+    public void setZipCode(Integer zipCode) {
         this.zipCode = zipCode;
     }
 

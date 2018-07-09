@@ -27,7 +27,7 @@ public class ICrudController<Service extends ICrudService,T, S extends Serializa
 
     @GetMapping("/all")
     public List<T> getAll(){
-
+    System.out.println("all");
         return service.getAll();
     }
 

@@ -16,7 +16,7 @@ public class Itinerary {
     @JoinColumn(name = "driver_id")
     private Driver driver;
 
-    @ElementCollection
+    @OneToMany(mappedBy = "itinerary", cascade = CascadeType.ALL)
     private List<Occurrence> occurrence;
 
     @OneToMany(mappedBy = "itinerary", cascade = CascadeType.ALL)

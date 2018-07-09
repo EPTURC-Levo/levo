@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.PostConstruct;
 
 @RestController
-@RequestMapping("api/v1/human")
+@RequestMapping("api/v1/driver")
 public class DriverController extends ICrudController<DriverService, Driver, Long>{
 
     @Autowired
