@@ -10,12 +10,12 @@ import javax.annotation.PostConstruct;
 
 @RestController
 @RequestMapping("api/v1/driver")
-public class DriverController extends ICrudController<DriverService, Driver, Long>{
+public class DriverRestController extends ICrudController<DriverService, Driver, Long>{
 
     @Autowired
     private DriverService driverService;
 
-    public DriverController(){
+    public DriverRestController(){
 
     }
 

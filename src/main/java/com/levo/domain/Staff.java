@@ -13,7 +13,7 @@ public class Staff {
     private String socialId;
     private String email;
     private String name;
-
+    private Long phoneNumber;
     @OneToOne(cascade = CascadeType.ALL)
     private Credential credential;
 
@@ -71,5 +71,13 @@ public class Staff {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Long getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(Long phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 }

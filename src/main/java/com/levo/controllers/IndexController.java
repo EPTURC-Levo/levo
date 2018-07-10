@@ -2,7 +2,11 @@ package com.levo.controllers;
 
 
 import com.levo.domain.Driver;
+import com.levo.domain.Itinerary;
+import com.levo.domain.Vehicle;
 import com.levo.services.DriverService;
+import com.levo.services.ItineraryService;
+import com.levo.services.VehicleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,6 +23,12 @@ public class IndexController {
 
     @Autowired
     private DriverService driverService;
+
+    @Autowired
+    private VehicleService vehicleService;
+
+    @Autowired
+    private ItineraryService itineraryService;
 
     @RequestMapping(method= RequestMethod.GET)
     public ModelAndView index(){
@@ -38,27 +48,42 @@ public class IndexController {
     @GetMapping("veiculo")
     public ModelAndView veiculo(){
         ModelAndView mv = new ModelAndView("veiculo");
+        List<Vehicle> vehicleList = vehicleService.getAll();
+        Vehicle vehicle = new Vehicle();
+        mv.addObject("vehicleList",vehicleList);
+        mv.addObject("selectedDriver", vehicle);
         return mv;
     }
     @GetMapping("vinculo")
     public ModelAndView vinculo(){
         ModelAndView mv = new ModelAndView("vinculo");
+
+
         return mv;
     }
 
     @GetMapping("motorista")
     public ModelAndView motorista(){
-        ModelAndView mv = new ModelAndView("motorista");
+        ModelAndView mv = new ModelAndView("/motorista");
 
         List<Driver> driverList = driverService.getAll();
 
+        Driver driver = new Driver();
         mv.addObject("driverList", driverList);
+        mv.addObject("selectedDriver", driver);
         return mv;
     }
 
     @GetMapping("itinerario")
     public ModelAndView itinerario(){
         ModelAndView mv = new ModelAndView("itinerario");
+        List<Itinerary> itineraryList = itineraryService.getAll();
+
+        Itinerary selectedItinerary = new Itinerary();
+        mv.addObject("driverList", itineraryList);
+        mv.addObject("selectedItinerary", selectedItinerary);
+
+
         return mv;
     }
 

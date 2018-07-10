@@ -40,11 +40,11 @@ $("#form-cadastro-motorista").submit(function( event ) {
    });
    $("#form-cadastro-motorista")[0].reset();
 })
-
+/*
 $("#form-edit-motorista").submit(function( event ) {
     event.preventDefault()
  })
- 
+ */
 $(document).ready(() => {
    
     setMasks();
@@ -70,7 +70,7 @@ $(document).ready(() => {
         $("#editDeleteDriverModal").modal('show')
 
     });
-    
+    /*
     $("#editDriver").on( "click", function() { 
         let userToSend = {
             nome: $("#nome-editDelete-motorista").val(),
@@ -103,7 +103,7 @@ $(document).ready(() => {
 
 
     });
-
+*/
     $("#deleteDriver").on( "click", function() { 
         $.ajax({
             method:"DELETE",
@@ -127,7 +127,7 @@ $(document).ready(() => {
 
     });
     // End of events
-    
+    /*
     function setMasks(){
         $("input[id*='cpf-motorista']").inputmask({
             mask: ['999.999.999-99'],
@@ -149,7 +149,7 @@ $(document).ready(() => {
             keepStatic: true
         });
     }
-
+*/
     function getDrivers(){
         $.ajax({
             method:"GET",
